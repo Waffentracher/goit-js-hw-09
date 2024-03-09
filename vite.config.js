@@ -14,8 +14,7 @@ export default defineConfig(({ command }) => {
 
       rollupOptions: {
         input: {
-          main: './src/js/1-galary.js', // Ось тут вказуємо шлях до вашого основного файлу JavaScript
-          // Якщо ви хочете розділити частини коду
+          main: './src/js/1-galary.js',
         },
         output: {
           manualChunks(id) {
