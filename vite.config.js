@@ -14,7 +14,7 @@ export default defineConfig(({ command }) => {
 
       rollupOptions: {
         input: {
-          main: './src/js/1-galary.js',
+          main: './src/js/1-gallary.js',
         },
         output: {
           manualChunks(id) {
