@@ -28,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       form.email.value = '';
       form.message.value = '';
-
-      // Не видаляємо дані з локального сховища
     } else {
       alert('Please fill in both fields.');
     }

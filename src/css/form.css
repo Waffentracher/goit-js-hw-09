@@ -1,0 +1,56 @@
+/* CSS стилі для форми */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.feedback-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  
+}
+
+.feedback-form label {
+    display: block;
+   
+    
+}
+
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 7px;
+    width: calc(100% - 22px);
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    
+}
+
+.feedback-form button[type="submit"] {
+    background-color: #4E75FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form button[type="submit"]:hover {
+    background-color: #6C8CFF;
+}
+
+/* Додаткові стилі можна додавати відповідно до ваших потреб */
