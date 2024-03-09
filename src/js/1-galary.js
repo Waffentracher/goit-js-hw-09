@@ -69,22 +69,22 @@ const images = [
 const galleryList = document.querySelector('.gallery');
 
 galleryList.addEventListener('click', event => {
-  event.preventDefault(); // Відміняємо стандартну дію посилання
+  event.preventDefault(); 
 
   const target = event.target;
 
-  // Перевіряємо, чи клікнули саме на зображення
+  
   if (target.nodeName === 'IMG') {
-    // Отримуємо посилання на велике зображення з атрибуту href
+   
     const largeImageSrc = target.parentElement.href;
     const description = target.alt;
 
-    // Відкриття зображення у лайтбоксі
+    
     const lightbox = new SimpleLightbox(`
       <img width="1400" height="900" src="${largeImageSrc}" alt="${description}">
     `);
 
-    // При кліку на велике зображення в лайтбоксі закриваємо його
+   
     lightbox
       .element()
       .querySelector('img')
