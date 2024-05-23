@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import glob from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
@@ -11,10 +10,9 @@ export default defineConfig(({ command }) => {
     root: 'src',
     build: {
       sourcemap: true,
-
       rollupOptions: {
         input: {
-          main: './src/js/1-gallery.js',
+          main: './src/index.html',
         },
         output: {
           manualChunks(id) {
