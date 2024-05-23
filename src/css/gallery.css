@@ -1,3 +1,10 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -13,5 +20,18 @@
 .gallery-image {
     width: 360px;
     height: 200px;
+}
+.btn {
+    
+    background-color: #8d8d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
+.btn:hover {
+     background-color: #000;
 }
 

@@ -52,4 +52,16 @@ body {
 .feedback-form button[type="submit"]:hover {
     background-color: #6C8CFF;
 }
+.btn {
 
+    background-color: #8d8d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
