@@ -1,13 +1,14 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: './public', // Вказуємо корінь проекту
+  root: './src/public', // Вказуємо корінь проекту на папку src/public
   build: {
-    outDir: '../dist', // Директорія для побудови файлів
+    outDir: '../../dist', // Директорія для побудови файлів, відносно кореня проекту
     rollupOptions: {
       input: {
-        main: './public/index.html', // Головний HTML файл
-        gallery: './public/1-gallery.html', // Додатковий HTML файл, якщо є
+        main: './src/public/index.html', // Головний HTML файл
+        gallery: './src/public/1-gallery.html', // Додатковий HTML файл
+        form: './src/public/2-form.html', // Інший HTML файл
       },
     },
   },
