@@ -1,6 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
-
 import 'simplelightbox/dist/simple-lightbox.min.css';
+
+if (typeof global === 'undefined') {
+  var global = window;
+}
 
 const images = [
   {
@@ -68,24 +71,28 @@ const images = [
   },
 ];
 
-const list = document.querySelector('.gallery');
-const markup = images
-  .map(
-    images => `<li class="gallery-item">
-  <a class="gallery-link" href="${images.original}">
-    <img
-      class="gallery-image"
-      src="${images.preview}"
-      alt="${images.description}"
-    />
-  </a>
-</li>`
-  )
-  .join('');
+document.addEventListener('DOMContentLoaded', () => {
+  const list = document.querySelector('.gallery');
+  if (list) {
+    const markup = images
+      .map(
+        image => `<li class="gallery-item">
+          <a class="gallery-link" href="${image.original}">
+            <img
+              class="gallery-image"
+              src="${image.preview}"
+              alt="${image.description}"
+            />
+          </a>
+        </li>`
+      )
+      .join('');
 
-list.innerHTML = markup;
+    list.innerHTML = markup;
 
-new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
+    new SimpleLightbox('.gallery a', {
+      captionsData: 'alt',
+      captionDelay: 250,
+    });
+  }
 });
